@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+
+/* Header CSS */
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-right: 80px;
+    gap: 50px;
+}
+
+.header i {
+    color: black;
+    font-size: 20px;
+}
+
+.logo {
+    padding: 3% 3%;
+}
+
+/* Restaurant CSS */
+
+.restaurant img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+/* Menu CSS */
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20px;
+    
+}
+
+.title i {
+    font-size: 25px;
+}
+
+h1 {
+    font-family: 'Shrikhand', cursive;
+    padding: 20px;
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.title .fa-solid:hover {
+    transition : 500ms;
+    background-color: #fff;
+    color: #9356dc;
+    border: none;
+}
+
+/* Menu CSS */
+
+.menu{
+    display: flex;
+    flex-direction: column;
+}
+
+.menu h2{
+    font-weight: 200;
+    text-transform: uppercase;
+    margin-left: 20px;
+    font-size: 20px;
+    padding-top: 30px;
+}
+
+.menu h2::after {
+    content: "";
+    background-color: #99E2D0;
+    width: 50px;
+    height: 4px;
+    position: absolute;
+    left: 22px;
+    margin-top: 28px;
+}
+
+.entree {
+    width: 90%;
+    height: Auto;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 13px;
+    margin: 20px 0 0 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    border-radius: 20px 20px 20px 20px;
+    font-weight: 100;
+}
+
+.entree {
+    -webkit-animation:fadeIn 0.6s linear;
+    animation:fadeIn 0.6s linear;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+}
+
+@keyframes fadeIn  {
+    0% {opacity: 0; transform:translate3d(0,100px,0);}
+    100% {opacity: 1; transform:translate3d(0,0,0);}
+}
+
+.entree:nth-child(2),
+.entree:nth-child(7),
+.entree:nth-child(11) {
+    -webkit-animation-delay:0.2s;
+    animation-delay:0.2s;
+}
+
+.entree:nth-child(3),
+.entree:nth-child(8),
+.entree:nth-child(12) {
+    -webkit-animation-delay:0.4s;
+    animation-delay:0.4s;
+}
+
+.entree:nth-child(4),
+.entree:nth-child(9),
+.entree:nth-child(13) {
+    -webkit-animation-delay:0.6s;
+    animation-delay:0.6s;
+}
+
+.price {
+    font-weight: 600;
+}
+
+.items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.content {
+    width: 100%;
+}
+
+.entree {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hide {
+    position: absolute;
+    right: 0;
+    width: 18%;
+    padding: 22px;
+    color: #ffffff;
+    background-color:  #99E2D0;
+    transform: translateX(100%);
+    transition: transform 1s;
+    visibility: hidden;
+    border-radius: 0px 20px 20px 0px;
+    font-size: 20px;
+}
+
+.entree:hover .hide{
+    transform: translateX(0%);
+    visibility:visible;
+}
+
+.entree:hover .content{
+    padding-right: 20%;
+    transition: .9s;
+}
+
+.hide .fa-solid {
+    transform: rotate(-360deg);
+}
+
+.entree:hover .fa-solid {
+    transform: rotate(0deg);
+    transition: .8s;
+}
+
+.order {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn{
+    width: 30%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: #fff;
+    background: linear-gradient(200deg, #9356dc 0%, #ff79da 100%);
+    padding: 15px 25px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 50px;
+    transition : 500ms;
+    cursor: pointer;
+    margin: 50px;
+}
+
+.btn:hover{
+    transition : 500ms;
+    width: 32%;
+    background: linear-gradient(200deg, #ff79da 0%, #9356dc 100%);
+    color: #ffffff;
+    border: none;
+}
+
+
+/* Footer CSS */
+
+.about {
+    margin-top: 30px;
+    width:100%;
+    height:200px;
+    color: #fff;
+    background: #353535;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 20px;
+}
+
+.about h1 {
+    font-family: 'Shrikhand', cursive;
+    padding: 20px 0 10px 0;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.about i {
+    padding-right: 10px;
+}
+
+.about a {
+    text-decoration: none;
+    color: #fff;
+    padding-top: 10px;
+    font-weight: 100;
+}
+
+
+
