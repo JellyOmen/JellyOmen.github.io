@@ -9,6 +9,10 @@ body {
     font-weight: 600;
 }
 
+body::after {
+    animation: body 10s normal forwards;
+}
+
 /* Header CSS */
 
 .header {
@@ -56,7 +60,7 @@ body {
     font-weight: 600;
     letter-spacing: 1.5px;
     color: #fff;
-    background: linear-gradient(200deg, #9356dc 0%, #ff79da 100%);
+    background: linear-gradient(100deg, #9256dceb 0%, #ff79d9eb 100%);
     padding: 15px 25px;
     border: none;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -68,7 +72,8 @@ body {
 .btn:hover{
     transition : 500ms;
     padding: 15px 30px;
-    background: linear-gradient(200deg, #ff79da 0%, #9356dc 100%);
+    background: linear-gradient(-100deg, #ff79d9 0%, #9256dc 100%);
+    box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px;
     color: #ffffff;
     border: none;
 }
@@ -235,4 +240,32 @@ h1 {
     color: #fff;
     padding-top: 10px;
     font-weight: 100;
+}
+
+.lds-dual-ring {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 45%;
+}
+.lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 6px solid #9356dc;
+    border-color: #9356dc transparent #9356dc transparent;
+    animation: lds-dual-ring 3s normal forwards;
+}
+@keyframes lds-dual-ring {
+    0% {
+    opacity: 1;
+    transform: rotate(0deg);
+    }
+    100% {
+    display:  none;
+    opacity: 0;
+    transform: rotate(360deg);
+    }
 }

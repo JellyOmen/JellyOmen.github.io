@@ -14,6 +14,7 @@
     <!-- Title -->
     <title>OhMyFood</title>
 </head>
+
 <body>
     <!-- Header -->
     <div class="header">
@@ -29,7 +30,7 @@
     <div class="explore">
         <h2>Book the menu you like</h2>
         <p>Discover top-of-the-art restaurants we picked for you.</p>
-        <button type="submit" class="btn btn-primary">Explore our restaurants</button>
+        <a href="#restaurants"><button type="submit" class="btn btn-primary">Explore our restaurants</button></a>
     </div>
     <!-- How it works -->
     <div class="HowItWorks">
@@ -52,8 +53,10 @@
             </div>
         </div>
     </div>
+   
     <!-- Restaurants -->
-    <div class="restaurants">
+    <div class="restaurants" id="restaurants">
+        <div class="lds-dual-ring"></div>
         <h2>Restaurants</h2>
             <div class="list">
                 <div class="model">
@@ -102,6 +105,7 @@
             <a href="#">Contact</a>
         </div>
     </footer>
+
 
     <script src="https://kit.fontawesome.com/7f20e510e4.js" crossorigin="anonymous"></script>
 </body>
