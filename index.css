@@ -8,9 +8,50 @@ body {
     font-family: 'Roboto', sans-serif;
     font-weight: 600;
 }
+.fadeInUp {
+    animation: fadeInUp 3s;
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate(0, 20%);
+    }
 
-body::after {
-    animation: body 10s normal forwards;
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+
+/* Spinner CSS */
+
+.dual-ring {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 45%;
+}
+.dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 6px solid #9356dc;
+    border-color: #9356dc transparent #9356dc transparent;
+    animation: dual-ring 3s normal forwards;
+}
+@keyframes dual-ring {
+    0% {
+    opacity: 1;
+    transform: rotate(0deg);
+    }
+    100% {
+    display:  none;
+    opacity: 0;
+    transform: rotate(360deg);
+    }
 }
 
 /* Header CSS */
@@ -242,30 +283,3 @@ h1 {
     font-weight: 100;
 }
 
-.lds-dual-ring {
-    display: inline-block;
-    position: absolute;
-    top: 50%;
-    left: 45%;
-}
-.lds-dual-ring:after {
-    content: " ";
-    display: block;
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    border: 6px solid #9356dc;
-    border-color: #9356dc transparent #9356dc transparent;
-    animation: lds-dual-ring 3s normal forwards;
-}
-@keyframes lds-dual-ring {
-    0% {
-    opacity: 1;
-    transform: rotate(0deg);
-    }
-    100% {
-    display:  none;
-    opacity: 0;
-    transform: rotate(360deg);
-    }
-}
