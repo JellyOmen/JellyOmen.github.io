@@ -9,6 +9,21 @@ body {
     font-weight: 600;
 }
 
+.fadeInUp {
+    animation: fadeInUp 3s;
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate(0, 20%);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
 /* Header CSS */
 
 .header {
@@ -93,7 +108,7 @@ h1 {
 }
 
 .entree {
-    width: 90%;
+    width: 93%;
     height: Auto;
     overflow: hidden;
     cursor: pointer;
@@ -109,9 +124,7 @@ h1 {
 }
 
 .entree {
-    -webkit-animation:fadeIn 0.6s linear;
     animation:fadeIn 0.6s linear;
-    -webkit-animation-fill-mode:both;
     animation-fill-mode:both;
 }
 
@@ -123,22 +136,23 @@ h1 {
 .entree:nth-child(2),
 .entree:nth-child(7),
 .entree:nth-child(11) {
-    -webkit-animation-delay:0.2s;
     animation-delay:0.2s;
 }
 
 .entree:nth-child(3),
 .entree:nth-child(8),
 .entree:nth-child(12) {
-    -webkit-animation-delay:0.4s;
     animation-delay:0.4s;
 }
 
 .entree:nth-child(4),
 .entree:nth-child(9),
 .entree:nth-child(13) {
-    -webkit-animation-delay:0.6s;
     animation-delay:0.6s;
+}
+
+.entree:nth-child(5) {
+    animation-delay:0.8s;
 }
 
 .price {
