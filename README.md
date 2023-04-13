@@ -11,4 +11,4 @@ Complete project brief [here](https://github.com/JellyOmen/OhMyFood/files/112168
 
 
 ## Link to webpage:
-https://github.com/JellyOmen/OhMyFood
+JellyOmen.github.io
